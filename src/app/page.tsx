@@ -36,22 +36,22 @@ export default function Home() {
       });
     });
     
-    // Make sure all tracks support keyboard accessibility
-    document.querySelectorAll('.track').forEach(track => {
-      track.setAttribute('tabindex', '0');
-      track.addEventListener('keydown', (e) => {
-        const event = e as KeyboardEvent;
-        const trackEl = event.currentTarget as HTMLElement;
-        if (event.key === 'ArrowRight') {
-          trackEl.scrollBy({ left: 420, behavior: 'smooth' });
-        }
-        if (event.key === 'ArrowLeft') {
-          trackEl.scrollBy({ left: -420, behavior: 'smooth' });
-        }
-      });
+    // // Make sure all tracks support keyboard accessibility
+    // document.querySelectorAll('.track').forEach(track => {
+    //   track.setAttribute('tabindex', '0');
+    //   track.addEventListener('keydown', (e) => {
+    //     const event = e as KeyboardEvent;
+    //     const trackEl = event.currentTarget as HTMLElement;
+    //     if (event.key === 'ArrowRight') {
+    //       trackEl.scrollBy({ left: 420, behavior: 'smooth' });
+    //     }
+    //     if (event.key === 'ArrowLeft') {
+    //       trackEl.scrollBy({ left: -420, behavior: 'smooth' });
+    //     }
+    //   });
 
       
-    });
+    // });
 
   }, []); 
 
